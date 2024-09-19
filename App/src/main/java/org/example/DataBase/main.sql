@@ -51,8 +51,12 @@ create table Equipments(
     qualityCoefficient decimal
 ) INHERITS (components);
 
-ALTER TABLE Contracts
-    ADD FOREIGN KEY (PartnerID) REFERENCES Partners(id);
+ALTER TABLE Projects
+    ADD FOREIGN KEY (clientID) REFERENCES Clients(id);
+ALTER TABLE Estimates
+    ADD FOREIGN KEY (projectID) REFERENCES Projects(id);
+ALTER TABLE components
+    ADD FOREIGN KEY (projectID) REFERENCES Projects(id);
 
 
 
