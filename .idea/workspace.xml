@@ -36,7 +36,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "feature/BAT-2-Client-Classes",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/YCode/Desktop/WORA/BatiCuisine-Java-App",
     "node.js.detected.package.eslint": "true",
@@ -72,7 +72,7 @@
       <workItem from="1726742179762" duration="393000" />
       <workItem from="1726742588409" duration="833000" />
       <workItem from="1726743441217" duration="391000" />
-      <workItem from="1726754274779" duration="194000" />
+      <workItem from="1726754274779" duration="574000" />
     </task>
     <servers />
   </component>
