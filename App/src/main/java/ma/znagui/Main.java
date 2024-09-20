@@ -2,8 +2,6 @@ package main.java.ma.znagui;
 
 //import org.example.Model.Client;
 
-import main.java.ma.znagui.Model.Client;
-
 public class Main {
     public static void main(String[] args) {
   System.out.println("Hello World!");
@@ -12,8 +10,9 @@ public class Main {
   System.out.println(i);
 
 
-      Client client = new Client(1,"oussama","ada","adcz",false);
-      System.out.println(client);
+//      Client client = new Client(1,"oussama","ada","adcz",false);
+//      System.out.println(client);
+        main.java.ma.znagui.Config.DbConnection.Dbconnexion();
 
 
 
