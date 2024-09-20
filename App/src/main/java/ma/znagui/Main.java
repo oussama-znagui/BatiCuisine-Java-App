@@ -4,15 +4,18 @@ package main.java.ma.znagui;
 
 public class Main {
     public static void main(String[] args) {
-  System.out.println("Hello World!");
-  int i = 4;
-  i++;
-  System.out.println(i);
+//  System.out.println("Hello World!");
+//  int i = 4;
+//  i++;
+//  System.out.println(i);
 
 
 //      Client client = new Client(1,"oussama","ada","adcz",false);
 //      System.out.println(client);
-        main.java.ma.znagui.Config.DbConnection.Dbconnexion();
+
+        main.java.ma.znagui.UI.ClientUI.addClient();
+
+
 
 
 
