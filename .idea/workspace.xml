@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a0cfa8e-07d5-4238-ab40-3551d3d88aae" name="Changes" comment="" />
+    <list default="true" id="0a0cfa8e-07d5-4238-ab40-3551d3d88aae" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BatiCuisine-Java-App/main/java/ma/znagui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BatiCuisine-Java-App/main/java/ma/znagui/Main.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,11 +24,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-22.0.2/lib/src.zip!/java.base/java/lang/Boolean.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-22.0.2/lib/src.zip!/java.base/java/lang/Object.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\php\php.exe" />
   <component name="ProjectColorInfo">{
@@ -34,8 +46,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feature/BAT-2-Client-Classes",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/YCode/Desktop/WORA/BatiCuisine-Java-App",
@@ -47,15 +61,23 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.java.ma.znagui.Main" />
+      <module name="App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
         <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
-        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
       </set>
     </attachedChunks>
   </component>
@@ -72,7 +94,12 @@
       <workItem from="1726742179762" duration="393000" />
       <workItem from="1726742588409" duration="833000" />
       <workItem from="1726743441217" duration="391000" />
-      <workItem from="1726754274779" duration="574000" />
+      <workItem from="1726754274779" duration="4518000" />
+      <workItem from="1726823313634" duration="707000" />
+      <workItem from="1726824056847" duration="69000" />
+      <workItem from="1726824141113" duration="219000" />
+      <workItem from="1726824377843" duration="276000" />
+      <workItem from="1726824677747" duration="8399000" />
     </task>
     <servers />
   </component>
