@@ -2,6 +2,11 @@ package main.java.ma.znagui;
 
 //import org.example.Model.Client;
 
+import ma.znagui.Enum.ComponentType;
+import ma.znagui.Enum.ProjectStatus;
+import ma.znagui.Model.Component;
+import ma.znagui.Model.Labor;
+import ma.znagui.Model.Project;
 import ma.znagui.UI.MainMenu;
 import ma.znagui.service.ClientService;
 import ma.znagui.service.Interface.ClientServiceInterface;
@@ -29,6 +34,13 @@ public class Main {
 
 
         MainMenu.mainMenu();
+//        Client c1 = new Client(1,"hachem","svgr@zrg.e","36343",true);
+//        Project p1 = new Project(1,"c hj",12,33, ProjectStatus.valueOf("CANCELLED"),c1);
+//
+//        Component l1 = new Labor(1,"hamid",20, ComponentType.valueOf("LABOR"),p1,12,33,1);
+//
+//        System.out.println(l1.getProject().getClient().getEmail());
+
 
 
 

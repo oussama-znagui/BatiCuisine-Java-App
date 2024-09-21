@@ -1,10 +1,16 @@
 package ma.znagui.UI;
 
+import ma.znagui.Enum.ComponentType;
+import ma.znagui.Model.Component;
+import ma.znagui.Model.Equipment;
+import ma.znagui.Model.Labor;
 import ma.znagui.Model.Project;
 import ma.znagui.service.Interface.ProjectServiceInterface;
 import ma.znagui.service.ProjectService;
 import main.java.ma.znagui.Model.Client;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ProjectUI {
@@ -28,7 +34,7 @@ public class ProjectUI {
                     projectService.displayAllProjects();
                     break;
                 case 2:
-                    getData();
+                    addProject();
 
 
             }
@@ -36,16 +42,18 @@ public class ProjectUI {
     }
 
 
-    public static void getData(){
+    public static void addProject(){
         System.out.println("Titre du projet : ");
         String titre = scanner.nextLine();
 
         System.out.println("--- Ajout des matériaux ---");
+        List<Component> components = new ArrayList<Component>();
         do{
-            //get data materiel
+            Component e = getEquipmentData();
+            components.add(e);
             System.out.println("Voulez-vous ajouter un autre matériau ? (y/n) :");
             String response = scanner.nextLine();
-            if(response.equals("n")){
+            if(response.equals("n") || response.equals("N")){
                 break;
             }
 
@@ -53,8 +61,10 @@ public class ProjectUI {
 
         System.out.println("--- Ajout de la main-d'oeuvre ---");
         do{
-            //get data main-d'oeuvre
-            System.out.println("Voulez-vous ajouter un autre type de main-d'œuvre ? (y/n) :");
+            Component l = getLaborData();
+            components.add(l);
+
+            System.out.println("Voulez-vous ajouter un autre   main-d'œuvre ? (y/n) :");
             String response = scanner.nextLine();
             if(response.equals("n")){
                 break;
@@ -62,15 +72,54 @@ public class ProjectUI {
 
         }while(true);
 
+        for(Component c : components){
+            System.out.println(c);
+        }
+
+    }
 
 
+    public static Component getLaborData(){
+        System.out.println("Nom de main-d'œuvre : ");
+        String name = scanner.nextLine();
+        System.out.println("Taux TVA : ");
+        int tva = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Taux horaire de cette main-d'œuvre (MAD/h) : ");
+        double hourlyRate = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Nombre d'heures travaillées : ");
+        double heureRate = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Facteur de productivité (EX : 1.3)");
+        double productivity = scanner.nextDouble();
+        scanner.nextLine();
+        Component labor = new Labor(0,name,tva, ComponentType.LABOR,null,hourlyRate,heureRate,productivity);
+        return labor;
 
+    }
 
+    public static Component getEquipmentData(){
+        System.out.println("Nom du matériau : ");
+        String name = scanner.nextLine();
+        System.out.println("Taux TVA : ");
+        int tva = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Quantité de ce matériau : ");
+        double quantity = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Coût unitaire de ce matériau : ");
+        double unitPrice = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Coût de transport de ce matériau : ");
+        double transport = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Coefficient de qualité : ");
+        double quality = scanner.nextDouble();
+        scanner.nextLine();
 
-
-
-
-
+        Component eq = new Equipment(0,name,tva,ComponentType.EQUIPMENT,null,quantity,unitPrice,transport,quality);
+        return eq;
 
     }
 }

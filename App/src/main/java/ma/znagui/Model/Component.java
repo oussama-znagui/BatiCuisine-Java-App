@@ -61,6 +61,6 @@ public abstract class Component {
     }
 
     public String toString() {
-        return "Composant N° : " + id + " Projet --> " + project.getProjectName() + " || Nom:  " + name + ", TVA :  " + tva + ", type : " + type;
+        return "Composant N° : " + id + " Projet --> "  + " || Nom:  " + name + ", TVA :  " + tva + ", type : " + type;
     }
 }
