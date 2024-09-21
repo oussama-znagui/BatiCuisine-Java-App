@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a0cfa8e-07d5-4238-ab40-3551d3d88aae" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ClientUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ClientUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/BatiCuisine-Java-App/main/java/ma/znagui/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BatiCuisine-Java-App/main/java/ma/znagui/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
       </list>
@@ -50,7 +51,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/BAT-2-Client-Classes",
+    "git-widget-placeholder": "feature/BAT-1-Project-Classes",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/YCode/Desktop/WORA/BatiCuisine-Java-App",
     "node.js.detected.package.eslint": "true",
