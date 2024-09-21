@@ -79,7 +79,7 @@ public class ClientRepository implements ClientRepositoryInterface {
 
     public boolean UpdateClient(Client oldClient, Client client) {
         PreparedStatement ps = null;
-        ResultSet rs  = null;
+
         try {
             String sql = "update clients set name = ?,email = ?,phone = ?,ispro = ? where id = ?";
             ps = conn.prepareStatement(sql);
@@ -98,7 +98,7 @@ public class ClientRepository implements ClientRepositoryInterface {
 
     public boolean deleteClient(Client client) {
         PreparedStatement ps = null;
-        ResultSet rs  = null;
+
         try{
             String sql = "delete from clients where id = ?";
             ps = conn.prepareStatement(sql);
