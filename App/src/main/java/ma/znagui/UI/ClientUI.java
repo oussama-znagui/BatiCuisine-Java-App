@@ -31,6 +31,26 @@ public class ClientUI {
         return clientService.addClient(c);
     }
 
+    public static void clientMenu(){
+        System.out.println("Gestion Des Clients");
+        System.out.println("--------------------");
+
+        while (true){
+            System.out.println("1 - List des clients");
+            System.out.println("2 - Ajouter un client ");
+            System.out.println("3 - Modifier un client ");
+            System.out.println("4 - Supprimer un client ");
+            System.out.println("0 - Menu principal");
+            int option = scanner.nextInt();
+            scanner.nextLine();
+            switch (option){
+                case 1:
+            }
+        }
+
+
+    }
+
 
 
 
