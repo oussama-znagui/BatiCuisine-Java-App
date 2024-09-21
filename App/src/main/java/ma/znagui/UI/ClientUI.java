@@ -1,5 +1,6 @@
 package main.java.ma.znagui.UI;
 
+import ma.znagui.UI.MainMenu;
 import ma.znagui.service.ClientService;
 import ma.znagui.service.Interface.ClientServiceInterface;
 import main.java.ma.znagui.Model.Client;
@@ -26,10 +27,33 @@ public class ClientUI {
 
     public static Client addClient(){
         Client c = getData();
-        clientService.addClient(c);
-        System.out.println(clientService.addClient(c));
         return clientService.addClient(c);
     }
+    
+    public static void updateClient(){
+        clientService.displayAllClients();
+        System.out.print("Client ID : ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        Client old = clientService.getClient(id);
+        Client newC = getData();
+        clientService.updateClient(old,newC);
+        System.out.println("Client Modifie avec succes ");
+
+    }
+
+    public static void deleteClient(){
+        clientService.displayAllClients();
+        System.out.print("Client ID : ");
+        int id = scanner.nextInt();
+        scanner.nextLine();
+        Client client = clientService.getClient(id);
+        clientService.deleteClient(client);
+        System.out.println("Client Supprimé avec succes ");
+
+
+    }
+
 
     public static void clientMenu(){
         System.out.println("Gestion Des Clients");
@@ -45,6 +69,20 @@ public class ClientUI {
             scanner.nextLine();
             switch (option){
                 case 1:
+                    clientService.displayAllClients();
+                    break;
+                case 2:
+                    addClient();
+                    break;
+                case 3:
+                    updateClient();
+                    break;
+                case 4:
+                    deleteClient();
+                    break;
+                case 0:
+                    MainMenu.mainMenu();
+
             }
         }
 

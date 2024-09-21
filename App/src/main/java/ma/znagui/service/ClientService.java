@@ -33,4 +33,12 @@ public class ClientService implements ClientServiceInterface {
     }
 
 
+    public void displayAllClients() {
+        List<Client> clients = clientRepository.getClients();
+        for (Client client : clients) {
+            System.out.println(client);
+        }
+    }
+
+
 }

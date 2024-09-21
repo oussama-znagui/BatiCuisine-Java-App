@@ -9,5 +9,6 @@ public interface ClientServiceInterface {
     public boolean updateClient(Client oldClient, Client client);
     public List<Client> getClients();
     public boolean deleteClient(Client client);
+    public void displayAllClients();
 
 }
