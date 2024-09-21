@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0a0cfa8e-07d5-4238-ab40-3551d3d88aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ClientUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ClientUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ClientServiceInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/BAT-1-Project-Classes",
+    "git-widget-placeholder": "feature/BAT-3-Gestion-des-composants",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/YCode/Desktop/WORA/BatiCuisine-Java-App",
     "node.js.detected.package.eslint": "true",
