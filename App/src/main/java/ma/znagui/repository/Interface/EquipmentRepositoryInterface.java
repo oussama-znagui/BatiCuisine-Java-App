@@ -4,4 +4,5 @@ import ma.znagui.Model.Equipment;
 
 public interface EquipmentRepositoryInterface {
     public void addEquipment(Equipment equipment);
+
 }
