@@ -1,10 +1,13 @@
 package ma.znagui.UI;
 
 import ma.znagui.Enum.ComponentType;
+import ma.znagui.Enum.ProjectStatus;
 import ma.znagui.Model.Component;
 import ma.znagui.Model.Equipment;
 import ma.znagui.Model.Labor;
 import ma.znagui.Model.Project;
+import ma.znagui.service.ComponentService;
+import ma.znagui.service.Interface.ComponentServiceInterface;
 import ma.znagui.service.Interface.ProjectServiceInterface;
 import ma.znagui.service.ProjectService;
 import main.java.ma.znagui.Model.Client;
@@ -16,6 +19,7 @@ import java.util.Scanner;
 public class ProjectUI {
     private static Scanner scanner = new Scanner(System.in);
     private static ProjectServiceInterface projectService = new ProjectService();
+    private static ComponentServiceInterface componentService = new ComponentService();
 
     public static void projectMenu(){
         System.out.println("Gestion des Projets");
@@ -35,6 +39,7 @@ public class ProjectUI {
                     break;
                 case 2:
                     addProject();
+                    break;
 
 
             }
@@ -45,11 +50,14 @@ public class ProjectUI {
     public static void addProject(){
         System.out.println("Titre du projet : ");
         String titre = scanner.nextLine();
+        Project p = new Project(0,titre,0,0, ProjectStatus.INPROGRESS,new Client(1,"allo","z","z",true));
+        Project p1 = projectService.addProject(p);
 
         System.out.println("--- Ajout des matériaux ---");
         List<Component> components = new ArrayList<Component>();
         do{
             Component e = getEquipmentData();
+            e.setProject(p1);
             components.add(e);
             System.out.println("Voulez-vous ajouter un autre matériau ? (y/n) :");
             String response = scanner.nextLine();
@@ -62,6 +70,7 @@ public class ProjectUI {
         System.out.println("--- Ajout de la main-d'oeuvre ---");
         do{
             Component l = getLaborData();
+            l.setProject(p1);
             components.add(l);
 
             System.out.println("Voulez-vous ajouter un autre   main-d'œuvre ? (y/n) :");
@@ -72,9 +81,12 @@ public class ProjectUI {
 
         }while(true);
 
-        for(Component c : components){
-            System.out.println(c);
-        }
+//        for(Component c : components){
+//            System.out.println(c);
+//        }
+
+        componentService.addComponentsToProject(components);
+
 
     }
 
