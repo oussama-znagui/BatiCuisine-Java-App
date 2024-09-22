@@ -19,8 +19,6 @@ public class ComponentService implements ComponentServiceInterface {
     public boolean addComponentsToProject(List<Component> components){
         components.stream().filter(component -> component instanceof Labor).forEach(component -> {laborRepository.addLabor((Labor) component);});
         components.stream().filter(component -> component instanceof Equipment).forEach(component -> {equipmentRepository.addEquipment((Equipment) component);});
-
-
         return true;
     }
 
