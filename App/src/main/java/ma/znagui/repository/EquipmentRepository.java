@@ -13,9 +13,9 @@ public class EquipmentRepository implements EquipmentRepositoryInterface {
     public void addEquipment(Equipment equipment) {
         PreparedStatement ps = null;
         try {
-            String sql = "insert into equipments values(?,?,?::componenttype,?,?,?,?,?)";
+            String sql = "insert into equipments values(?,?,?::componenttype,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, null);
+            ps.setInt(1, 0);
             ps.setString(2, equipment.getName());
             ps.setString(3,equipment.getType().name());
             ps.setInt(4,equipment.getTva());

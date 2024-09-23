@@ -16,7 +16,7 @@ public class LaborRepository implements LaborRepositoryInterface {
         try {
             String sql = "insert into labors values(?,?,?::componenttype,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, null);
+            ps.setInt(1, 0);
             ps.setString(2, lab.getName());
             ps.setString(3,lab.getType().name());
             ps.setInt(4,lab.getTva());

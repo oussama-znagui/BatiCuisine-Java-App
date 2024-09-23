@@ -9,8 +9,13 @@ import ma.znagui.Model.Labor;
 import ma.znagui.Model.Project;
 import ma.znagui.UI.MainMenu;
 import ma.znagui.service.ClientService;
+import ma.znagui.service.ComponentService;
 import ma.znagui.service.Interface.ClientServiceInterface;
+import ma.znagui.service.Interface.ComponentServiceInterface;
 import main.java.ma.znagui.Model.Client;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,11 +38,17 @@ public class Main {
 //        System.out.println("supp");
 
 
-        MainMenu.mainMenu();
-//        Client c1 = new Client(1,"hachem","svgr@zrg.e","36343",true);
-//        Project p1 = new Project(1,"c hj",12,33, ProjectStatus.valueOf("CANCELLED"),c1);
-//
-//        Component l1 = new Labor(1,"hamid",20, ComponentType.valueOf("LABOR"),p1,12,33,1);
+//        MainMenu.mainMenu();
+        Client c1 = new Client(1,"hachem","svgr@zrg.e","36343",true);
+        Project p1 = new Project(1,"c hj",12,33, ProjectStatus.valueOf("CANCELLED"),c1);
+
+        Component l1 = new Labor(1,"hamid",20, ComponentType.valueOf("LABOR"),p1,12,33,1);
+        List<Component> cmps = new ArrayList<Component>();
+        cmps.add(l1);
+        ComponentServiceInterface cs = new ComponentService();
+        System.out.println(cs.calculateComponentsCost(cmps));
+
+
 //
 //        System.out.println(l1.getProject().getClient().getEmail());
 
