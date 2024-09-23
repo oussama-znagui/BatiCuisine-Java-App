@@ -16,7 +16,7 @@ public class MainMenu {
           if(i != 0){ System.out.println("Choix Invalide");}
           System.out.println("1 - Gestion des Clientes");
           System.out.println("2 - Gestion des Projets");
-          System.out.println("3 - Calculer le coût d'un projet");
+          System.out.println("3 - Calculer le coût d'un projet & devis");
           int option = scanner.nextInt();
           switch(option){
               case 1:
