@@ -84,13 +84,13 @@ public class ProjectRepository implements ProjectRepositoryInterface {
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
-            String sql = "update projects set projectname = ? , profitmargin = ? , totalcost =  ?,projectstatus = ? ,clientid = ? WHERE id = ?";
+            String sql = "update projects set projectname = ? , profitmargin = ? , totalcost =  ?,projectstatus = ?::projectstatus ,clientid = ? WHERE id = ?";
             ps = conn.prepareStatement(sql);
             ps.setString(1,project.getProjectName());
             ps.setDouble(2,project.getProfitMargin());
             ps.setDouble(3,project.getTotalCost());
             ps.setString(4,project.getStatus().name());
-            ps.setInt(5,oldProject.getClient().getId());
+            ps.setInt(5,project.getClient().getId());
             ps.setInt(6,oldProject.getId());
             ps.executeUpdate();
             return true;

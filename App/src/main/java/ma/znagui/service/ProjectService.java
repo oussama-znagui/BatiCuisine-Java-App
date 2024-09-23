@@ -21,4 +21,8 @@ public class ProjectService implements ProjectServiceInterface {
     public Project addProject(Project project){
         return repository.addProject(project);
     }
+
+    public boolean updateProject(Project oldProject, Project project){
+        return repository.updateProject(oldProject, project);
+    }
 }

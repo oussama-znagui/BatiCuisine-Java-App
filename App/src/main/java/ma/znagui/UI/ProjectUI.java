@@ -53,39 +53,57 @@ public class ProjectUI {
         Project p = new Project(0,titre,0,0, ProjectStatus.INPROGRESS,new Client(1,"allo","z","z",true));
         Project p1 = projectService.addProject(p);
 
-        System.out.println("--- Ajout des matériaux ---");
-        List<Component> components = new ArrayList<Component>();
-        do{
-            Component e = getEquipmentData();
-            e.setProject(p1);
-            components.add(e);
-            System.out.println("Voulez-vous ajouter un autre matériau ? (y/n) :");
-            String response = scanner.nextLine();
-            if(response.equals("n") || response.equals("N")){
-                break;
-            }
-
-        }while(true);
-
-        System.out.println("--- Ajout de la main-d'oeuvre ---");
-        do{
-            Component l = getLaborData();
-            l.setProject(p1);
-            components.add(l);
-
-            System.out.println("Voulez-vous ajouter un autre   main-d'œuvre ? (y/n) :");
-            String response = scanner.nextLine();
-            if(response.equals("n")){
-                break;
-            }
-
-        }while(true);
+//        System.out.println("--- Ajout des matériaux ---");
+//        List<Component> components = new ArrayList<Component>();
+//        do{
+//            Component e = getEquipmentData();
+//            e.setProject(p1);
+//            components.add(e);
+//            System.out.println("Voulez-vous ajouter un autre matériau ? (y/n) :");
+//            String response = scanner.nextLine();
+//            if(response.equals("n") || response.equals("N")){
+//                break;
+//            }
+//
+//        }while(true);
+//
+//        System.out.println("--- Ajout de la main-d'oeuvre ---");
+//        do{
+//            Component l = getLaborData();
+//            l.setProject(p1);
+//            components.add(l);
+//
+//            System.out.println("Voulez-vous ajouter un autre   main-d'œuvre ? (y/n) :");
+//            String response = scanner.nextLine();
+//            if(response.equals("n")){
+//                break;
+//            }
+//
+//        }while(true);
 
 //        for(Component c : components){
 //            System.out.println(c);
 //        }
 
-        componentService.addComponentsToProject(components);
+//        componentService.addComponentsToProject(components);
+
+        System.out.println("Souhaitez-vous appliquer une marge bénéficiaire au projet? (y/n) :");
+        String response = scanner.nextLine();
+        if(response.equals("y") || response.equals("Y")){
+            System.out.println("Entrez le pourcentage de marge bénéficiaire: ");
+            double pourcentage = scanner.nextDouble();
+            scanner.nextLine();
+            p1.setProfitMargin(pourcentage);
+            System.out.println("------->>>" + p1);
+            projectService.updateProject(p1,p1);
+
+            System.out.println("Projet ajoute avec succes 1");
+            System.out.println("Composants ajoutés avec succes 1");
+            System.out.println("Marge bénéficiaire ajoutée avec succes 1");
+            System.out.println("-----------------------------------------");
+            System.out.println("Veullez Consulter la section Cout&Devis (3)");
+
+        }
 
 
     }
@@ -132,6 +150,8 @@ public class ProjectUI {
 
         Component eq = new Equipment(0,name,tva,ComponentType.EQUIPMENT,null,quantity,unitPrice,transport,quality);
         return eq;
+
+
 
     }
 }
