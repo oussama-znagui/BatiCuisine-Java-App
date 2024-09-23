@@ -14,16 +14,16 @@ public class LaborRepository implements LaborRepositoryInterface {
     public void addLabor(Labor lab) {
         PreparedStatement ps = null;
         try {
-            String sql = "insert into labors values(?,?,?::componenttype,?,?,?,?,?)";
+            String sql = "insert into labors(name,type,tva,projectID,hourlyrate,workingHours,productivityCff) values(?,?::componenttype,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, 0);
-            ps.setString(2, lab.getName());
-            ps.setString(3,lab.getType().name());
-            ps.setInt(4,lab.getTva());
-            ps.setInt(5,lab.getProject().getId());
-            ps.setDouble(6,lab.getHourlyRate());
-            ps.setDouble(7,lab.getWorkingHours());
-            ps.setDouble(8,lab.getProductivityCff());
+
+            ps.setString(1, lab.getName());
+            ps.setString(2,lab.getType().name());
+            ps.setInt(3,lab.getTva());
+            ps.setInt(4,lab.getProject().getId());
+            ps.setDouble(5,lab.getHourlyRate());
+            ps.setDouble(6,lab.getWorkingHours());
+            ps.setDouble(7,lab.getProductivityCff());
             ps.executeUpdate();
 
         } catch (SQLException e) {

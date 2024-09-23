@@ -13,17 +13,17 @@ public class EquipmentRepository implements EquipmentRepositoryInterface {
     public void addEquipment(Equipment equipment) {
         PreparedStatement ps = null;
         try {
-            String sql = "insert into equipments values(?,?,?::componenttype,?,?,?,?,?,?)";
+            String sql = "insert into equipments(name,type,tva,projectID,unitcost,quantity,transportcost,qualityCoefficient) values(?,?::componenttype,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, 0);
-            ps.setString(2, equipment.getName());
-            ps.setString(3,equipment.getType().name());
-            ps.setInt(4,equipment.getTva());
-            ps.setInt(5,equipment.getProject().getId());
-            ps.setDouble(6,equipment.getUnitCost());
-            ps.setDouble(7,equipment.getQuantity());
-            ps.setDouble(8,equipment.getTransportCost());
-            ps.setDouble(9,equipment.getQualityCoefficient());
+
+            ps.setString(1, equipment.getName());
+            ps.setString(2,equipment.getType().name());
+            ps.setInt(3,equipment.getTva());
+            ps.setInt(4,equipment.getProject().getId());
+            ps.setDouble(5,equipment.getUnitCost());
+            ps.setDouble(6,equipment.getQuantity());
+            ps.setDouble(7,equipment.getTransportCost());
+            ps.setDouble(8,equipment.getQualityCoefficient());
             ps.executeUpdate();
 
 
