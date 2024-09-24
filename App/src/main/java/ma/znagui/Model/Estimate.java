@@ -1,12 +1,12 @@
 package ma.znagui.Model;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
+
 
 public class Estimate {
     private int id;
     private double estimatedAmount;
-    private LocalTime issueDate;
+    private LocalDate issueDate;
     private LocalDate expirationDate;
     private boolean accepted;
     private Project project;
@@ -14,7 +14,7 @@ public class Estimate {
     public Estimate() {
 
     }
-    public Estimate(int id, double estimatedAmount, LocalTime issueDate, LocalDate expirationDate, boolean accepted, Project project) {
+    public Estimate(int id, double estimatedAmount, LocalDate issueDate, LocalDate expirationDate, boolean accepted, Project project) {
         this.id = id;
         this.estimatedAmount = estimatedAmount;
         this.issueDate = issueDate;
@@ -37,10 +37,10 @@ public class Estimate {
         this.estimatedAmount = estimatedAmount;
     }
 
-    public LocalTime getIssueDate() {
+    public LocalDate getIssueDate() {
         return issueDate;
     }
-    public void setIssueDate(LocalTime issueDate) {
+    public void setIssueDate(LocalDate issueDate) {
         this.issueDate = issueDate;
     }
 

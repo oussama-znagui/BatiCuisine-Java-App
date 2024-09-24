@@ -130,6 +130,8 @@ public class ProjectUI {
             scanner.nextLine();
             p1.setProfitMargin(pourcentage);
             System.out.println("------->>>" + p1);
+            p1.setTotalCost(componentService.calculateComponentsCost(components));
+
             projectService.updateProject(p1,p1);
 
             System.out.println("Projet ajoute avec succes 1");

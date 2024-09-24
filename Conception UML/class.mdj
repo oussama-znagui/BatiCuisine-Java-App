@@ -840,7 +840,7 @@
 											"top": 103,
 											"width": 132.51708984375,
 											"height": 13,
-											"text": "Composants"
+											"text": "Component"
 										},
 										{
 											"_type": "LabelView",
@@ -3065,6 +3065,18 @@
 							"headQualifiersCompartment": {
 								"$ref": "AAAAAAGSBXVzARKNZaU="
 							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGSEAqJUINpVXc=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"font": "Arial;13;0",
+							"left": 317,
+							"top": 295,
+							"width": 100,
+							"height": 25
 						}
 					]
 				},
@@ -3446,7 +3458,7 @@
 							"_parent": {
 								"$ref": "AAAAAAGSBVtLpf+0VBI="
 							},
-							"name": "Composants",
+							"name": "Component",
 							"ownedElements": [
 								{
 									"_type": "UMLAssociation",

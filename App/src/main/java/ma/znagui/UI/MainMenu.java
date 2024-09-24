@@ -26,6 +26,7 @@ public class MainMenu {
                   ProjectUI.projectMenu();
                   break;
               case 3:
+                  EstimateUI.estimateMenu();
                   break;
 
 

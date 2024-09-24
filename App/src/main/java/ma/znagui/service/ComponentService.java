@@ -36,7 +36,7 @@ public class ComponentService implements ComponentServiceInterface {
 
         double costMateriel = components.stream().filter(component -> component instanceof Equipment)
                 .map(component -> {
-                    return equipmentService.calculatePrice((Equipment) components);
+                    return equipmentService.calculatePrice((Equipment) component);
                 }).reduce(0.0,Double::sum);
 
 

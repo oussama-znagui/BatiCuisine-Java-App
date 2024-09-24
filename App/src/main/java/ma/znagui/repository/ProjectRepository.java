@@ -72,7 +72,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
             ps.setInt(1,id);
             rs = ps.executeQuery();
             if(rs.next()){
-                Project project = new Project(rs.getInt("id"),rs.getString("projectname"),rs.getDouble("profitMargin"),rs.getDouble("TotalCost"), ProjectStatus.valueOf(rs.getString("status")),clientRepo.getClient(rs.getInt("clientID")));
+                Project project = new Project(rs.getInt("id"),rs.getString("projectname"),rs.getDouble("profitMargin"),rs.getDouble("TotalCost"), ProjectStatus.valueOf(rs.getString("projectstatus")),clientRepo.getClient(rs.getInt("clientID")));
                 return project;
             }else {
                 return null;

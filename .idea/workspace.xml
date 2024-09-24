@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0a0cfa8e-07d5-4238-ab40-3551d3d88aae" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Model/Estimate.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/Model/Estimate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/EstimateUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/EstimateUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/UI/ProjectUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/repository/ProjectRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ComponentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ComponentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ProjectServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/Interface/ProjectServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/main/java/ma/znagui/service/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Conception UML/class.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/Conception UML/class.mdj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +45,9 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2mHlVFjwUmU4wYD7ygJc7Zth9gd" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,7 +58,7 @@
     "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/BAT-3-Gestion-des-composants",
+    "git-widget-placeholder": "BAT-5-Generer-Devis",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/YCode/Desktop/WORA/BatiCuisine-Java-App",
     "node.js.detected.package.eslint": "true",
@@ -96,6 +108,8 @@
       <workItem from="1726824141113" duration="219000" />
       <workItem from="1726824377843" duration="276000" />
       <workItem from="1726824677747" duration="8399000" />
+      <workItem from="1727189585725" duration="23000" />
+      <workItem from="1727201794172" duration="5012000" />
     </task>
     <servers />
   </component>
