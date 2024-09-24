@@ -3,6 +3,8 @@ package ma.znagui.Model;
 import ma.znagui.Enum.ProjectStatus;
 import main.java.ma.znagui.Model.Client;
 
+import java.util.List;
+
 public class Project {
     private int id;
     private String projectName;
@@ -10,6 +12,7 @@ public class Project {
     private double TotalCost;
     private ProjectStatus status;
     private Client client;
+    private List<Component> components;
 
 
     public Project() {

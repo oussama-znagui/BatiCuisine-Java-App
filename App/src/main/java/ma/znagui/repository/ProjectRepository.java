@@ -1,6 +1,10 @@
 package ma.znagui.repository;
 
+import ma.znagui.Enum.ComponentType;
 import ma.znagui.Enum.ProjectStatus;
+import ma.znagui.Model.Component;
+import ma.znagui.Model.Equipment;
+import ma.znagui.Model.Labor;
 import ma.znagui.Model.Project;
 import ma.znagui.repository.Interface.ClientRepositoryInterface;
 import ma.znagui.repository.Interface.ProjectRepositoryInterface;
@@ -116,6 +120,38 @@ public class ProjectRepository implements ProjectRepositoryInterface {
         }
 
     }
+
+
+    public List<Component> getProjectComponents(Project project){
+        List<Component> components = new ArrayList<>();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            String sql = "select * from labors where id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,project.getId());
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Labor labor = new Labor(rs.getInt("id"),rs.getString("name"),rs.getInt("tva"), ComponentType.valueOf(rs.getString("type")),project,rs.getDouble("hourlyRate"),rs.getDouble("workingHours"),rs.getDouble("productivityCff"));
+                components.add(labor);
+            }
+
+            String sql2 = "select * from equipments where id = ?";
+            ps = conn.prepareStatement(sql2);
+            ps.setInt(1,project.getId());
+            rs = ps.executeQuery();
+            while(rs.next()){
+                Equipment equipment = new Equipment(rs.getInt("id"),rs.getString("name"),rs.getInt("tva"), ComponentType.valueOf(rs.getString("type")),project,rs.getDouble("unitCost"),rs.getDouble("quantity"),rs.getDouble("transportCost"),rs.getDouble("qualityCoefficient"));
+                components.add(equipment);
+            }
+            return components;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
 }
+
 
 

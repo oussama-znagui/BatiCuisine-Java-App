@@ -2,12 +2,15 @@ package ma.znagui.Model;
 
 import ma.znagui.Enum.ComponentType;
 
+import java.util.List;
+
 public abstract class Component {
     private int id;
     private String name;
     private int tva;
     private ComponentType type;
     private Project project;
+
 
 
     public Component() {
