@@ -3,6 +3,7 @@ package ma.znagui.service;
 import ma.znagui.Model.Component;
 import ma.znagui.Model.Equipment;
 import ma.znagui.Model.Labor;
+import ma.znagui.Model.Project;
 import ma.znagui.repository.EquipmentRepository;
 import ma.znagui.repository.Interface.EquipmentRepositoryInterface;
 import ma.znagui.repository.Interface.LaborRepositoryInterface;
@@ -42,6 +43,9 @@ public class ComponentService implements ComponentServiceInterface {
 
         return costLabors + costMateriel;
     }
+
+
+
 
 
 

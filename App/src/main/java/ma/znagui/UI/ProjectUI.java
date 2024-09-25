@@ -27,6 +27,7 @@ public class ProjectUI {
 
 
     public static void projectMenu(){
+        int option = 0;
         System.out.println("Gestion des Projets");
         System.out.println("---------------------");
 
@@ -36,7 +37,11 @@ public class ProjectUI {
             System.out.println("3 - Modifier un projet");
             System.out.println("4 - Supprimer un projet");
             System.out.println("0 - Menu principal");
-            int option = scanner.nextInt();
+            try {
+                option = scanner.nextInt();
+            }catch (Exception e){
+                System.out.println("Choix Invalide");
+            }
             scanner.nextLine();
             switch(option){
                 case 1:

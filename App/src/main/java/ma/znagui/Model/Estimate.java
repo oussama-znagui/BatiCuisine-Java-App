@@ -66,5 +66,9 @@ public class Estimate {
         this.project = project;
     }
 
+    public String toString() {
+        return "Devis N°" + this.id + "||" + this.estimatedAmount + " " + this.issueDate + " " + this.expirationDate + " accepte : " + this.accepted + "-----> Projet " + this.project.getProjectName();
+    }
+
 
 }

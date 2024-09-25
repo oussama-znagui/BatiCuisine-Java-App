@@ -7,6 +7,8 @@ import ma.znagui.Model.Project;
 import ma.znagui.Util.DateValidation;
 import ma.znagui.repository.EstimateRepository;
 import ma.znagui.repository.Interface.EstimateRepositoryInterface;
+import ma.znagui.service.EstimateService;
+import ma.znagui.service.Interface.EstimateServiceInterface;
 import ma.znagui.service.Interface.ProjectServiceInterface;
 import ma.znagui.service.ProjectService;
 
@@ -17,7 +19,7 @@ import java.util.Scanner;
 public class EstimateUI {
     public static Scanner scanner = new Scanner(System.in);
     private static ProjectServiceInterface projectService = new ProjectService();
-    private static EstimateRepositoryInterface esprepo = new EstimateRepository();
+    private static EstimateServiceInterface esprepo = new EstimateService();
 
     public static void getEstimate(Estimate estimate) {
         System.out.println("-------------------------------------------------------");
@@ -30,10 +32,13 @@ public class EstimateUI {
         System.out.println("\t\t\t\t\t\t\t\tEmail : " + estimate.getProject().getClient().getEmail());
         System.out.println("\t\t\t\t\t\t\t\tTel : " + estimate.getProject().getClient().getPhone());
         System.out.println("-------------------------------------------------------");
-        List<Component> = projectService
-        for (for (Component c : components) {
+
+        for (Component c : projectService.getProjectComponents(estimate.getProject())) {
             System.out.println(c);
-        })
+        };
+
+        System.out.println("Prix Total : " + estimate.getEstimatedAmount());
+        System.out.println("du : " + estimate.getIssueDate() + "au :" + estimate.getExpirationDate());
 
 
 
@@ -47,16 +52,43 @@ public class EstimateUI {
         while (true){
             System.out.println("1 - Visualiser le devis d'un projet");
             System.out.println("2 - Generer un devis");
+            System.out.println("3 - Accepter un devis");
             int option = scanner.nextInt();
             scanner.nextLine();
             if (option == 1){
-                getEstimate();
-            }else if (option == 2){
+                projectService.displayAllProjects();
+                System.out.println("ProjectID : ");
+                int id = scanner.nextInt();
+                scanner.nextLine();
+                Project p = projectService.getProject(id);
 
-                esprepo.addEstimate(getData());
+                try {
+                    getEstimate(esprepo.getEstimateProject(p));
+                }catch (Exception e){
+                    System.out.println("veiller creer un devis pour le projet");
+                }
+
 
             }
-            else {
+            if (option == 2){
+
+                esprepo.addEstimate(getData());
+                break;
+
+            }
+            if (option == 3) {
+                esprepo.displayAllEstimates();
+                System.out.println("Devis ID: ");
+                int id = scanner.nextInt();
+                scanner.nextLine();
+                Estimate e = new Estimate();
+                e.setId(id);
+                esprepo.updateEstimate(e);
+                System.out.println("Devis  m ");
+                break;
+
+
+            } else {
                 System.out.println("Choix Invalide");
             }
 

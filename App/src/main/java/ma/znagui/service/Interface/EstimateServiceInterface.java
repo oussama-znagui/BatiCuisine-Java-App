@@ -1,13 +1,12 @@
-package ma.znagui.repository.Interface;
+package ma.znagui.service.Interface;
 
 import ma.znagui.Model.Estimate;
 import ma.znagui.Model.Project;
 
-import java.util.List;
+public interface EstimateServiceInterface {
 
-public interface EstimateRepositoryInterface  {
     public boolean addEstimate(Estimate estimate);
     public Estimate getEstimateProject(Project project);
-    public List<Estimate> getAllEstimates();
+    public void displayAllEstimates();
     public boolean updateEstimate(Estimate estimate);
 }
